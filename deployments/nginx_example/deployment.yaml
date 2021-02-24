@@ -20,6 +20,14 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: sitedata
+          mountPath: "/var/www/"
+      volumes:
+        - name: sitedata
+          persistentVolumeClaim:
+            claimName: pvc-webfronteg
+
 ---
 apiVersion: v1
 kind: Service
@@ -32,4 +40,3 @@ spec:
   ports:
   - port: 80
     targetPort: 80
-  
