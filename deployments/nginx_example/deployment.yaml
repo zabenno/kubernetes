@@ -24,8 +24,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc_webfronteg
+  name: svc-webfronteg
 spec:
+  type: NodePort
   selector:
     app: webfronteg
   ports:
