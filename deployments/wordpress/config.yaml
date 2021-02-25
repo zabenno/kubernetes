@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: wordpress
+  name: mysql
+data:
+  db-url: master.mysql
+  user: wordpress
+  db-name: wordpress
+
+

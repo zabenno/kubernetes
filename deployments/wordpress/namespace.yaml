@@ -1,0 +1,4 @@
+kind: nameSpace
+apiVersion: core/v1
+metadata:
+  name: wordpress
