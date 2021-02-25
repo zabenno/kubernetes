@@ -1,4 +1,4 @@
-kind: nameSpace
-apiVersion: core/v1
+apiVersion: v1
+kind: NameSpace
 metadata:
   name: wordpress
