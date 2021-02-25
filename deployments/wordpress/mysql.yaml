@@ -43,14 +43,11 @@ spec:
               secretKeyRef:
                 name: mysql
                 key: db-root-pswd
-  volumeClaimTemplates:
-  - metadata:
-      name: db-data
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 10Gi
+      volumes:
+        - name: db-data
+          persistentVolumeClaim:
+            claimName: mysql-data
+
 ---
 apiVersion: v1
 kind: Service
